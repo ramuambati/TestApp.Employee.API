@@ -9,7 +9,7 @@ namespace TestApp.Employee.Interfaces
 {
     public interface ILocalDbRepository
     {
-        Task AddEmployeeInfo(EmployeeInfo employeeInfo);
-        Task<IEnumerable<EmployeeInfo>> GetAllEmployees();        
+        public Task AddEmployeeInfo(EmployeeInfo employeeInfo);
+        public Task<IEnumerable<EmployeeInfo>> GetAllEmployees();        
     }
 }

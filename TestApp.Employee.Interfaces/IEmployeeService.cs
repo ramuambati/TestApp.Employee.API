@@ -9,8 +9,8 @@ namespace TestApp.Employee.Interfaces
 {
     public interface IEmployeeService
     {
-        Task AddEmployeeInfo(EmployeeInfo employeeInfo);
+        public Task AddEmployeeInfo(EmployeeInfo employeeInfo);
 
-        Task <IEnumerable<EmployeeInfo>> GetAllEmployees();
+        public Task <IEnumerable<EmployeeInfo>> GetAllEmployees();
     }
 }
