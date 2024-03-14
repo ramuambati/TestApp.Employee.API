@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TestApp.Employee.Interfaces\TestApp.Employee.Interfaces.csproj" />
+    <ProjectReference Include="..\TestApp.Masterdb.EF\TestApp.Masterdb.EF.csproj" />
+  </ItemGroup>
+
+</Project>
