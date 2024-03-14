@@ -1,12 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using Xunit;
+﻿using Microsoft.EntityFrameworkCore;
 using TestApp.Employee.Contracts;
 using TestApp.Employee.Db;
 using TestApp.Masterdb.EF.Models;
-using TestApp.Employee.Interfaces;
 
 namespace TestApp.Employee.Tests
 {

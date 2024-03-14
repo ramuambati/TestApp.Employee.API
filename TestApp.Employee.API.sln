@@ -19,6 +19,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp.Employee.Tests", "T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp.Employee.Interfaces", "TestApp.Employee.Interfaces\TestApp.Employee.Interfaces.csproj", "{56C7E6F8-67A3-449A-9561-29C2074D59A0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{888808D0-FC1D-4741-A698-2A1B012784E0}"
+	ProjectSection(SolutionItems) = preProject
+		GetAllEmployees.sql = GetAllEmployees.sql
+		Employee.sql = Employee.sql
+		Manager.sql = Manager.sql
+		Worker.sql = Worker.sql
+		Supervisor.sql = Supervisor.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
