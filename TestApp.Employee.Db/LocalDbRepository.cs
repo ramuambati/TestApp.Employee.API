@@ -14,7 +14,7 @@ namespace TestApp.Employee.Db
             _dbContext = dbContext;
         }
 
-        async Task ILocalDbRepository.AddEmployeeInfo(EmployeeInfo employeeInfo)
+        public async Task AddEmployeeInfo(EmployeeInfo employeeInfo)
         {
             Worker worker = new()
             {
@@ -24,8 +24,7 @@ namespace TestApp.Employee.Db
                 WorkerID = employeeInfo.Id                
             };
 
-            await _dbContext.Workers.AddAsync(worker);
-            //await _dbContext.SaveChangesAsync();
+            await _dbContext.Workers.AddAsync(worker);            
 
             switch (employeeInfo.EmployeeType)
             {
@@ -35,8 +34,7 @@ namespace TestApp.Employee.Db
                         PayPerHour = employeeInfo.PayPerHour ,
                         WorkerID = employeeInfo.Id
                     };
-                    await _dbContext.Employees.AddAsync(employee);
-                    //await _dbContext.SaveChangesAsync();
+                    await _dbContext.Employees.AddAsync(employee);                    
                     break;
                 case "Manager":
                     Manager manager = new()
@@ -45,8 +43,7 @@ namespace TestApp.Employee.Db
                         MaxExpenseAmount = employeeInfo.MaxExpenseAmount,
                         WorkerID = employeeInfo.Id
                     };
-                    await _dbContext.Managers.AddAsync(manager);
-                   // await _dbContext.SaveChangesAsync();
+                    await _dbContext.Managers.AddAsync(manager);                   
                     break;
                 case "Supervisor":
                     Supervisor supervisor = new()
@@ -54,8 +51,7 @@ namespace TestApp.Employee.Db
                         AnnualSalary = employeeInfo.AnnualSalary,
                         WorkerID = employeeInfo.Id
                     };
-                    await _dbContext.Supervisors.AddAsync(supervisor);
-                   // await _dbContext.SaveChangesAsync();
+                    await _dbContext.Supervisors.AddAsync(supervisor);                   
                     break;
             }
 
