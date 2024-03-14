@@ -25,36 +25,41 @@ namespace TestApp.Employee.Db
             };
 
             await _dbContext.Workers.AddAsync(worker);
-            await _dbContext.SaveChangesAsync();
+            //await _dbContext.SaveChangesAsync();
 
             switch (employeeInfo.EmployeeType)
             {
                 case "Employee":
                     Masterdb.EF.Models.Employee employee = new()
                     {
-                        PayPerHour = employeeInfo.PayPerHour                            
+                        PayPerHour = employeeInfo.PayPerHour ,
+                        WorkerID = employeeInfo.Id
                     };
                     await _dbContext.Employees.AddAsync(employee);
-                    await _dbContext.SaveChangesAsync();
+                    //await _dbContext.SaveChangesAsync();
                     break;
                 case "Manager":
                     Manager manager = new()
                     {
                         AnnualSalary = employeeInfo.AnnualSalary,
-                        MaxExpenseAmount = employeeInfo.MaxExpenseAmount
+                        MaxExpenseAmount = employeeInfo.MaxExpenseAmount,
+                        WorkerID = employeeInfo.Id
                     };
                     await _dbContext.Managers.AddAsync(manager);
-                    await _dbContext.SaveChangesAsync();
+                   // await _dbContext.SaveChangesAsync();
                     break;
                 case "Supervisor":
                     Supervisor supervisor = new()
                     {
-                        AnnualSalary = employeeInfo.AnnualSalary
+                        AnnualSalary = employeeInfo.AnnualSalary,
+                        WorkerID = employeeInfo.Id
                     };
                     await _dbContext.Supervisors.AddAsync(supervisor);
-                    await _dbContext.SaveChangesAsync();
+                   // await _dbContext.SaveChangesAsync();
                     break;
             }
+
+            await _dbContext.SaveChangesAsync();
         }
 
         public async Task<IEnumerable<EmployeeInfo>> GetAllEmployees()

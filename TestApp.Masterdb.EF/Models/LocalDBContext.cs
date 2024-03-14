@@ -37,8 +37,6 @@ namespace TestApp.Masterdb.EF.Models
             {
                 entity.ToTable("Employee");
 
-                entity.Property(e => e.EmployeeID).ValueGeneratedNever();
-
                 entity.Property(e => e.PayPerHour).HasColumnType("decimal(5, 2)");
 
                 entity.HasOne(d => d.Worker)
@@ -50,8 +48,6 @@ namespace TestApp.Masterdb.EF.Models
             modelBuilder.Entity<Manager>(entity =>
             {
                 entity.ToTable("Manager");
-
-                entity.Property(e => e.ManagerID).ValueGeneratedNever();
 
                 entity.Property(e => e.AnnualSalary).HasColumnType("decimal(10, 2)");
 
@@ -66,8 +62,6 @@ namespace TestApp.Masterdb.EF.Models
             modelBuilder.Entity<Supervisor>(entity =>
             {
                 entity.ToTable("Supervisor");
-
-                entity.Property(e => e.SupervisorID).ValueGeneratedNever();
 
                 entity.Property(e => e.AnnualSalary).HasColumnType("decimal(10, 2)");
 
