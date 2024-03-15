@@ -1,7 +1,6 @@
 ﻿USE [LocalDB]
 GO
 
-/****** Object:  Table [dbo].[Manager]    Script Date: 3/13/2024 9:38:12 PM ******/
 SET ANSI_NULLS ON
 GO
 
